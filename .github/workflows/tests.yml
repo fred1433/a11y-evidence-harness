@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
       - run: npm ci
       - name: Provide the example corpus, since a real one is never committed
         run: cp scripts/targets.example.mjs scripts/targets.mjs
@@ -24,4 +24,4 @@ jobs:
         # seeded defect is detected, that a corrected copy reports it as gone,
         # and that deleting the component yields "cannot conclude" rather than a
         # pass. A green run here says nothing about anybody's live site.
-        run: node --test tests/
+        run: node --test tests/harness.test.mjs tests/observations.test.mjs

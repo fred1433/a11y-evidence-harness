@@ -7,7 +7,7 @@
     "build": "node scripts/export-findings.mjs && next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test tests/",
+    "test": "node --test tests/harness.test.mjs tests/observations.test.mjs",
     "scan": "node scripts/scan.mjs",
     "manual": "node scripts/manual-checks.mjs",
     "export": "node scripts/export-findings.mjs",
