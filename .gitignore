@@ -57,3 +57,5 @@ data/shots/_recon*.png
 # The client-facing page and its evidence are served, not published as source.
 /src/
 /public/
+AGENTS.md
+CLAUDE.md
