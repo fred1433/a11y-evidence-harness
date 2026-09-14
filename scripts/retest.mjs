@@ -27,7 +27,7 @@ import { AxeBuilder } from '@axe-core/playwright';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { WCAG_TAGS, USER_AGENT, VIEWPORTS } from './targets.mjs';
+import { WCAG_TAGS, USER_AGENT, VIEWPORTS } from './config.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 

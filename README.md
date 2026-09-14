@@ -47,10 +47,12 @@ node scripts/retest.mjs --file fixtures/control-case/observed.html
 node scripts/retest.mjs --url https://example.com --controls findings.json
 ```
 
-`scripts/targets.mjs` is the only file you need to edit to point it somewhere else.
-Each entry carries an `expectState`, a selector or a phrase that proves the screen
-rendered: a framework shell answering 200 is not a page, and a scan of a shell must
-never be filed as a screen with no defects.
+Copy `scripts/targets.example.mjs` to `scripts/targets.mjs` and edit it: that is the
+only file you need to touch to point the harness somewhere else, and it is not
+committed, because a given engagement's corpus and its evidence belong to that
+engagement. Each entry carries an `expectState`, a selector or a phrase that proves
+the screen rendered: a framework shell answering 200 is not a page, and a scan of a
+shell must never be filed as a screen with no defects.
 
 ## Continuous integration
 

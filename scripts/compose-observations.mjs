@@ -9,7 +9,8 @@
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import path from 'node:path';
-import { TARGETS, VIEWPORTS, WCAG_TAGS, BEST_PRACTICE_TAGS, CORPUS_DATE } from './targets.mjs';
+import { TARGETS } from './targets.mjs';
+import { VIEWPORTS, WCAG_TAGS, BEST_PRACTICE_TAGS, CORPUS_DATE } from './config.mjs';
 import { WCAG22 } from './wcag22.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');

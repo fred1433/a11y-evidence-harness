@@ -11,7 +11,7 @@
 import { chromium } from 'playwright';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { USER_AGENT } from './targets.mjs';
+import { USER_AGENT } from './config.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const URL = 'https://app.weguide.com.au/signin?throughOption=email&canFillPreviousCredential=false&programCode=';

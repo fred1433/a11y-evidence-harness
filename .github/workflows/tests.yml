@@ -15,6 +15,8 @@ jobs:
         with:
           node-version: '22'
       - run: npm ci
+      - name: Provide the example corpus, since a real one is never committed
+        run: cp scripts/targets.example.mjs scripts/targets.mjs
       - run: npx playwright install --with-deps chromium
       - name: Run the control case
         # No website is contacted. The harness runs against the synthetic

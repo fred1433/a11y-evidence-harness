@@ -49,3 +49,11 @@ data/shots/_recon*.png
 # Dated runs against a live site are not published. The repository holds the
 # harness and its synthetic control case; observations live on the page only.
 /data/
+
+# The screens of a given engagement, and the evidence they produced, are not
+# published with the harness. Copy scripts/targets.example.mjs to get started.
+/scripts/targets.mjs
+
+# The client-facing page and its evidence are served, not published as source.
+/src/
+/public/

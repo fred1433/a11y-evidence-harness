@@ -23,7 +23,8 @@
 import { chromium } from 'playwright';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { TARGETS, VIEWPORTS, USER_AGENT, CORPUS_DATE } from './targets.mjs';
+import { TARGETS } from './targets.mjs';
+import { VIEWPORTS, USER_AGENT, CORPUS_DATE } from './config.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const PAUSE_BETWEEN_LOADS_MS = 2500;
