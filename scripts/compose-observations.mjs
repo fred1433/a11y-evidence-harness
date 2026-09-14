@@ -56,7 +56,7 @@ const add = (o) => O.push({ id: `O${String(O.length + 1).padStart(2, '0')}`, acc
     reproducedIn: RUNS,
     proposedCriterion: sc('4.1.2'),
     proposedRemediation:
-      'Bind the attribute instead of writing it as a string, for example [attr.aria-disabled]="getErrors(false).length > 0", and let it resolve to "true" or "false".',
+      'Bind the attribute rather than writing it as a string: [attr.aria-disabled]="getErrors(false).length > 0".',
     evidence: ['public/evidence/signin-login-button.png', 'data/scans/portal-signin-email.desktop.pass1.json', 'data/scans/portal-signin-email.desktop.pass2.json'],
     check: { kind: 'axe', ruleId: 'aria-valid-attr-value', slug: 'portal-signin-email', viewport: 'desktop', anchor: '#login-button', stateSelector: 'input[type=email]' },
     featured: true,

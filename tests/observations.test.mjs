@@ -177,8 +177,14 @@ test('execution issues are listed, and never counted as clean screens', opts, ()
   }
 });
 
+const pageSources = () =>
+  readdirSync(path.join(ROOT, 'src/app'))
+    .filter((f) => f.endsWith('.tsx') || f.endsWith('.ts'))
+    .map((f) => readFileSync(path.join(ROOT, 'src/app', f), 'utf8'))
+    .join('\n');
+
 test('the page states no total that is not computed from the observations', opts, () => {
-  const src = readFileSync(path.join(ROOT, 'src/app/page.tsx'), 'utf8');
+  const src = pageSources();
   const strings = src.match(/["'`][^"'`]{0,200}["'`]/g) ?? [];
   const claim = /\b\d+\s+(observations?|findings?|issues?|errors?|violations?|failures?|screens?|pages?|problems?)\b/i;
   const offenders = strings.filter((s) => claim.test(s));
@@ -190,9 +196,11 @@ test('the published JSON matches the source', opts, () => {
 });
 
 test('the words we are not allowed to use are not in the page', opts, () => {
-  const src = readFileSync(path.join(ROOT, 'src/app/page.tsx'), 'utf8');
+  const src = pageSources();
   for (const word of ['pre-audit', 'preaudit', 'compliant', 'conformance', 'certified', 'certification', 'drafted with Claude', 'checked by hand']) {
     assert.ok(!new RegExp(word.replace(/[-\s]/g, '[-\\s]'), 'i').test(src), `the page says "${word}"`);
   }
   assert.ok(!/—/.test(src), 'the page contains an em dash');
+  assert.match(src, /const CAL = "https:\/\/cal\.theaipipe\.com"/, 'the booking link must be exactly cal.theaipipe.com');
+  assert.match(src, /github\.com\/fred1433\/a11y-evidence-harness/, 'the repository link must point at the public harness');
 });
