@@ -1,0 +1,830 @@
+{
+  "schema": "a11y-evidence-harness/observations/1",
+  "corpus": {
+    "date": "2026-09-14",
+    "runs": [
+      {
+        "id": "pass1",
+        "label": "run A",
+        "startedAt": "2026-09-14T12:50:48.017Z"
+      },
+      {
+        "id": "pass2",
+        "label": "run B",
+        "startedAt": "2026-09-14T12:58:25.597Z"
+      }
+    ],
+    "screens": [
+      {
+        "slug": "portal-landing",
+        "url": "https://app.weguide.com.au/",
+        "label": "Portal landing (app.weguide.com.au)",
+        "group": "Patient portal",
+        "state": "Landing screen with the Login and Create an account buttons",
+        "stateVerified": true
+      },
+      {
+        "slug": "portal-signin-email",
+        "url": "https://app.weguide.com.au/signin?throughOption=email&canFillPreviousCredential=false&programCode=",
+        "label": "Portal sign in, email method",
+        "group": "Patient portal",
+        "state": "Sign in screen, email method, email field rendered",
+        "stateVerified": true
+      },
+      {
+        "slug": "portal-register-email",
+        "url": "https://app.weguide.com.au/register?throughOption=email&canFillPreviousCredential=false&programCode=",
+        "label": "Portal create account, email method",
+        "group": "Patient portal",
+        "state": "Create account screen, email method, form rendered and never submitted",
+        "stateVerified": true
+      },
+      {
+        "slug": "portal-login-deeplink",
+        "url": "https://app.weguide.com.au/login",
+        "label": "Portal /login deep link",
+        "group": "Patient portal",
+        "state": "Error screen reached from the /login deep link",
+        "stateVerified": true
+      },
+      {
+        "slug": "movement-home",
+        "url": "https://movement.weguide.health/",
+        "label": "Movement portal, exercise catalog",
+        "group": "Movement portal",
+        "state": "Exercise catalog rendered",
+        "stateVerified": true
+      },
+      {
+        "slug": "movement-program",
+        "url": "https://movement.weguide.health/program",
+        "label": "Movement portal, programs",
+        "group": "Movement portal",
+        "state": "Programs screen rendered",
+        "stateVerified": true
+      },
+      {
+        "slug": "movement-faq",
+        "url": "https://movement.weguide.health/faq",
+        "label": "Movement portal, FAQ",
+        "group": "Movement portal",
+        "state": "FAQ screen rendered",
+        "stateVerified": true
+      }
+    ],
+    "viewports": [
+      "desktop",
+      "mobile",
+      "zoom200"
+    ],
+    "viewportDetail": [
+      {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1,
+        "note": null
+      },
+      {
+        "name": "mobile",
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 3,
+        "note": null
+      },
+      {
+        "name": "zoom200",
+        "width": 640,
+        "height": 400,
+        "deviceScaleFactor": 2,
+        "note": "200% browser zoom on a 1280x800 display, emulated as a 640x400 CSS viewport at deviceScaleFactor 2"
+      }
+    ],
+    "engine": {
+      "axeCore": "4.13.0",
+      "browser": "Chromium 153.0.8010.12",
+      "headless": true
+    },
+    "tags": {
+      "normative": [
+        "wcag2a",
+        "wcag2aa",
+        "wcag21a",
+        "wcag21aa",
+        "wcag22aa"
+      ],
+      "separate": [
+        "best-practice"
+      ]
+    },
+    "rulesExecuted": 65,
+    "rulesRun": [
+      "area-alt",
+      "aria-allowed-attr",
+      "aria-braille-equivalent",
+      "aria-command-name",
+      "aria-conditional-attr",
+      "aria-deprecated-role",
+      "aria-hidden-body",
+      "aria-hidden-focus",
+      "aria-input-field-name",
+      "aria-meter-name",
+      "aria-progressbar-name",
+      "aria-prohibited-attr",
+      "aria-required-attr",
+      "aria-required-children",
+      "aria-required-parent",
+      "aria-roles",
+      "aria-tab-name",
+      "aria-toggle-field-name",
+      "aria-tooltip-name",
+      "aria-valid-attr",
+      "aria-valid-attr-value",
+      "aria-valid-attr-value",
+      "autocomplete-valid",
+      "avoid-inline-spacing",
+      "blink",
+      "button-name",
+      "bypass",
+      "color-contrast",
+      "color-contrast",
+      "definition-list",
+      "dlitem",
+      "document-title",
+      "duplicate-id-aria",
+      "form-field-multiple-labels",
+      "frame-focusable-content",
+      "frame-title",
+      "frame-title-unique",
+      "html-has-lang",
+      "html-lang-valid",
+      "html-xml-lang-mismatch",
+      "image-alt",
+      "input-button-name",
+      "input-image-alt",
+      "label",
+      "link-in-text-block",
+      "link-name",
+      "list",
+      "listitem",
+      "marquee",
+      "meta-refresh",
+      "meta-viewport",
+      "nested-interactive",
+      "no-autoplay-audio",
+      "object-alt",
+      "role-img-alt",
+      "scrollable-region-focusable",
+      "select-name",
+      "server-side-image-map",
+      "summary-name",
+      "svg-img-alt",
+      "target-size",
+      "td-headers-attr",
+      "th-has-data-cells",
+      "valid-lang",
+      "video-caption"
+    ],
+    "toolingNote": {
+      "evidenceSlug": "portal-signin-email",
+      "evidenceViewport": "desktop",
+      "patchedHostTags": {
+        "ion-app": 1,
+        "ion-input": 2,
+        "ion-alert": 1
+      },
+      "axeNodesAsServed": 106,
+      "axeNodesAfterRestore": 251,
+      "rulesEvaluatedAsServed": 5,
+      "rulesEvaluatedAfterRestore": 26,
+      "violationsAsServed": [
+        "meta-viewport(1)"
+      ],
+      "violationsAfterRestore": [
+        "aria-valid-attr-value(1)",
+        "color-contrast(1)",
+        "label(1)",
+        "meta-viewport(1)",
+        "role-img-alt(2)"
+      ]
+    },
+    "executionIssues": [
+      {
+        "key": "portal-login-deeplink.zoom200.pass1",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "portal-login-deeplink.zoom200.pass2",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-home.desktop.pass1",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-home.mobile.pass1",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle aria-valid-attr-value, color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-home.zoom200.pass1",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-home.desktop.pass2",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-home.mobile.pass2",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle aria-valid-attr-value, color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-home.zoom200.pass2",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-program.mobile.pass1",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle aria-valid-attr-value, color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-program.zoom200.pass1",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-program.mobile.pass2",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle aria-valid-attr-value, color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-program.zoom200.pass2",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-faq.desktop.pass1",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-faq.mobile.pass1",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle aria-valid-attr-value, color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-faq.zoom200.pass1",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-faq.desktop.pass2",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-faq.mobile.pass2",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle aria-valid-attr-value, color-contrast on this screen, so those rules are an open question here rather than a result"
+      },
+      {
+        "key": "movement-faq.zoom200.pass2",
+        "kind": "axe-incomplete",
+        "detail": "axe could not settle color-contrast on this screen, so those rules are an open question here rather than a result"
+      }
+    ],
+    "limitsShort": [
+      "The scripted tab sequence stops early on the portal, so the tab order was not measured end to end. No observation rests on it.",
+      "SC 2.4.11 Focus Not Obscured was not concluded: the hit test returns artefacts across the shadow boundary, so its results were discarded.",
+      "SC 3.3.8 Accessible Authentication was not concluded. One screen is not an authentication process."
+    ],
+    "limits": [
+      "The scripted tab sequence stops early on the portal, because focus returns to the document body between stops. The portal tab order was not measured end to end and no observation here rests on it.",
+      "SC 2.4.11 Focus Not Obscured was not concluded. The hit test that would answer it returns artefacts across the component shadow boundary, so its results were discarded rather than published.",
+      "The independent contrast recomputation reads colours from the light DOM and cannot see a background painted inside a shadow root. Where it disagrees with axe, the axe figure is the one quoted.",
+      "SC 2.5.8 Target Size was measured geometrically, with the spacing and inline exceptions applied. No control under 24 by 24 CSS pixels survived those exceptions on the screens observed. That is a measurement, not a verdict.",
+      "SC 3.3.8 Accessible Authentication was not concluded. In the state observed the sign in screen has no password field, no CAPTCHA and does not block pasting, but one screen is not the authentication process.",
+      "Criteria that need a person, among them whether an alternative text is meaningful, whether a reading order makes sense, whether a heading describes its section, and whether an error message helps, were not assessed here."
+    ]
+  },
+  "observations": [
+    {
+      "id": "O01",
+      "accessibilityReview": "pending",
+      "headline": "A template expression was left in an ARIA attribute",
+      "observation": "On the sign in screen the Login button carries aria-disabled=\"getErrors(false).length? 'true' : 'false'\". The framework binding was written as a literal string, so the expression reaches the browser un-evaluated. Assistive technology reads that value as neither true nor false.",
+      "screens": [
+        "portal-signin-email"
+      ],
+      "state": "Sign in screen, email method, reached from the landing screen and by direct URL",
+      "viewports": [
+        "desktop",
+        "mobile",
+        "zoom200"
+      ],
+      "selector": "#login-button .button-native",
+      "snippet": "<button type=\"button\" class=\"button-native\" part=\"native\" aria-disabled=\"getErrors(false).length? 'true' : 'false'\">",
+      "source": "axe",
+      "axeImpact": "critical",
+      "method": "axe-core 4.13.0, rule aria-valid-attr-value, Chromium 153 headless 1280x800, two runs on 14 Sep 2026 twenty minutes apart",
+      "technicalEvidence": "reproduced",
+      "reproducedIn": [
+        "pass1",
+        "pass2"
+      ],
+      "proposedCriterion": {
+        "number": "4.1.2",
+        "name": "Name, Role, Value",
+        "level": "A"
+      },
+      "proposedRemediation": "Bind the attribute instead of writing it as a string, for example [attr.aria-disabled]=\"getErrors(false).length > 0\", and let it resolve to \"true\" or \"false\".",
+      "evidence": [
+        "public/evidence/signin-login-button.png",
+        "data/scans/portal-signin-email.desktop.pass1.json",
+        "data/scans/portal-signin-email.desktop.pass2.json"
+      ],
+      "check": {
+        "kind": "axe",
+        "ruleId": "aria-valid-attr-value",
+        "slug": "portal-signin-email",
+        "viewport": "desktop",
+        "anchor": "#login-button",
+        "stateSelector": "input[type=email]"
+      },
+      "featured": true
+    },
+    {
+      "id": "O02",
+      "accessibilityReview": "pending",
+      "headline": "Form fields have a visible label and no accessible name",
+      "observation": "The word Email is painted above the sign in field, and First Name, Last Name and Program code above the create account fields, but the label elements that wrap those inputs contain no text. 5 fields across the two screens expose an empty accessible name, so a screen reader announces an unlabelled edit field.",
+      "screens": [
+        "portal-signin-email",
+        "portal-register-email"
+      ],
+      "state": "Sign in and create account screens, email method. Neither form was submitted with data.",
+      "viewports": [
+        "desktop",
+        "mobile",
+        "zoom200"
+      ],
+      "selector": "#ion-input-4",
+      "snippet": "<input class=\"native-input sc-ion-input-md\" id=\"ion-input-4\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" name=\"ion-input-4\" placeholder=\"\" spellcheck=\"false\" type=\"email\">",
+      "source": "axe",
+      "axeImpact": "critical",
+      "method": "axe-core 4.13.0, rule label, Chromium 153 headless 1280x800, two runs on 14 Sep 2026 twenty minutes apart",
+      "technicalEvidence": "reproduced",
+      "reproducedIn": [
+        "pass1",
+        "pass2"
+      ],
+      "proposedCriterion": {
+        "number": "4.1.2",
+        "name": "Name, Role, Value",
+        "level": "A"
+      },
+      "proposedRemediation": "Give each ion-input a label that reaches the native input, through the component label property or an aria-label, so the visible text and the accessible name are the same words.",
+      "evidence": [
+        "data/scans/portal-register-email.desktop.pass1.json",
+        "data/scans/portal-register-email.desktop.pass2.json"
+      ],
+      "check": {
+        "kind": "axe",
+        "ruleId": "label",
+        "slug": "portal-register-email",
+        "viewport": "desktop",
+        "anchor": "input[type=email]",
+        "stateSelector": "form"
+      }
+    },
+    {
+      "id": "O03",
+      "accessibilityReview": "pending",
+      "headline": "The viewport meta tag switches pinch zoom off",
+      "observation": "Every screen of the portal ships the same viewport tag with maximum-scale=1.0 and user-scalable=no. On a phone or tablet that stops a reader from pinching to enlarge the page. It was found on all four portal screens that were reached.",
+      "screens": [
+        "portal-landing",
+        "portal-signin-email",
+        "portal-register-email",
+        "portal-login-deeplink"
+      ],
+      "state": "All four portal screens reached without an account",
+      "viewports": [
+        "desktop",
+        "mobile",
+        "zoom200"
+      ],
+      "selector": "meta[name=\"viewport\"]",
+      "snippet": "<meta name=\"viewport\" content=\"viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no\">",
+      "source": "axe",
+      "axeImpact": "moderate",
+      "method": "axe-core 4.13.0, rule meta-viewport, Chromium 153 headless 1280x800, two runs on 14 Sep 2026 twenty minutes apart",
+      "technicalEvidence": "reproduced",
+      "reproducedIn": [
+        "pass1",
+        "pass2"
+      ],
+      "proposedCriterion": {
+        "number": "1.4.4",
+        "name": "Resize Text",
+        "level": "AA"
+      },
+      "proposedRemediation": "Drop maximum-scale and user-scalable from the viewport tag, leaving width=device-width, initial-scale=1.",
+      "evidence": [
+        "data/scans/portal-landing.desktop.pass1.json",
+        "data/scans/portal-landing.desktop.pass2.json"
+      ],
+      "check": {
+        "kind": "axe",
+        "ruleId": "meta-viewport",
+        "slug": "portal-landing",
+        "viewport": "desktop",
+        "anchor": "meta[name=viewport]",
+        "stateSelector": "body"
+      }
+    },
+    {
+      "id": "O04",
+      "accessibilityReview": "pending",
+      "headline": "Icons are exposed as images with nothing to announce",
+      "observation": "The phone and QR code icons beside the alternative sign in routes carry role=\"img\" with no aria-label and no title. A screen reader meets an image it must announce and has no words for it. If they are decoration, the role is what should go.",
+      "screens": [
+        "portal-signin-email",
+        "portal-register-email"
+      ],
+      "state": "Sign in and create account screens, email method",
+      "viewports": [
+        "desktop",
+        "mobile",
+        "zoom200"
+      ],
+      "selector": ".wg-phone",
+      "snippet": "<ion-icon _ngcontent-ng-c3013198412=\"\" appcustomname=\"wg-phone\" role=\"img\" class=\"md hydrated wg-phone\" src=\"/assets/custom-ion-icons/wg-phone.svg\"></ion-icon>",
+      "source": "axe",
+      "axeImpact": "serious",
+      "method": "axe-core 4.13.0, rule role-img-alt, Chromium 153 headless 1280x800, two runs on 14 Sep 2026 twenty minutes apart",
+      "technicalEvidence": "reproduced",
+      "reproducedIn": [
+        "pass1",
+        "pass2"
+      ],
+      "proposedCriterion": {
+        "number": "1.1.1",
+        "name": "Non-text Content",
+        "level": "A"
+      },
+      "proposedRemediation": "Either give each icon an aria-label that says what it does, or mark it aria-hidden=\"true\" and remove role=\"img\" when the neighbouring text already carries the meaning.",
+      "evidence": [
+        "data/scans/portal-signin-email.desktop.pass1.json",
+        "data/scans/portal-signin-email.desktop.pass2.json"
+      ],
+      "check": {
+        "kind": "axe",
+        "ruleId": "role-img-alt",
+        "slug": "portal-signin-email",
+        "viewport": "desktop",
+        "anchor": "[role=img]",
+        "stateSelector": "input[type=email]"
+      }
+    },
+    {
+      "id": "O05",
+      "accessibilityReview": "pending",
+      "headline": "Grey body text and category tabs sit just under the contrast threshold",
+      "observation": "Body text and the category tabs use #6b7280 on #f4f4f4. axe measures 4.39 to 1 where 4.5 is required for text of this size, and an independent recomputation from the rendered colours gives 4.4 to 1. The gap is small and it is on the running text of three screens.",
+      "screens": [
+        "movement-home",
+        "movement-program",
+        "movement-faq"
+      ],
+      "state": "Exercise catalog, programs and FAQ screens of the movement portal",
+      "viewports": [
+        "desktop",
+        "mobile",
+        "zoom200"
+      ],
+      "selector": ".catalog-subtitle",
+      "snippet": "<p class=\"catalog-subtitle\">Discover and practice exercises with real-time AI-powered form analysis.</p>",
+      "source": "axe",
+      "axeImpact": "serious",
+      "method": "axe-core 4.13.0, rule color-contrast, Chromium 153 headless 1280x800, two runs on 14 Sep 2026 twenty minutes apart, cross checked against contrast ratios recomputed from the rendered colours",
+      "technicalEvidence": "reproduced",
+      "reproducedIn": [
+        "pass1",
+        "pass2"
+      ],
+      "proposedCriterion": {
+        "number": "1.4.3",
+        "name": "Contrast (Minimum)",
+        "level": "AA"
+      },
+      "proposedRemediation": "Darken the grey one step, for example #4b5563 on the same background, which measures about 7 to 1.",
+      "evidence": [
+        "data/scans/movement-home.desktop.pass1.json",
+        "data/scans/movement-home.desktop.pass2.json"
+      ],
+      "check": {
+        "kind": "axe",
+        "ruleId": "color-contrast",
+        "slug": "movement-home",
+        "viewport": "desktop",
+        "anchor": ".catalog-subtitle",
+        "stateSelector": "h1"
+      }
+    },
+    {
+      "id": "O06",
+      "accessibilityReview": "pending",
+      "headline": "On a phone, the install banner has a close button with no name",
+      "observation": "At 390 by 844 the movement portal shows an add to home screen banner. Its close button has no text, no aria-label and no title, so it is announced as a button with nothing to say. It does not appear at desktop width, which is why one viewport is not enough.",
+      "screens": [
+        "movement-home",
+        "movement-program",
+        "movement-faq"
+      ],
+      "state": "Movement portal on a phone viewport, install banner shown",
+      "viewports": [
+        "mobile"
+      ],
+      "selector": "._closeButton_4z5c7_1",
+      "snippet": "<button class=\"_closeButton_4z5c7_1 iOSPWA-closeButton\">",
+      "source": "axe",
+      "axeImpact": "critical",
+      "method": "axe-core 4.13.0, rule button-name, Chromium 153 headless 390x844, two runs on 14 Sep 2026 twenty minutes apart",
+      "technicalEvidence": "reproduced",
+      "reproducedIn": [
+        "pass1",
+        "pass2"
+      ],
+      "proposedCriterion": {
+        "number": "4.1.2",
+        "name": "Name, Role, Value",
+        "level": "A"
+      },
+      "proposedRemediation": "Give the close button an aria-label such as \"Dismiss install banner\".",
+      "evidence": [
+        "data/scans/movement-home.mobile.pass1.json",
+        "data/scans/movement-home.mobile.pass2.json"
+      ],
+      "check": {
+        "kind": "axe",
+        "ruleId": "button-name",
+        "slug": "movement-home",
+        "viewport": "mobile",
+        "anchor": "button",
+        "stateSelector": "h1"
+      }
+    },
+    {
+      "id": "O07",
+      "accessibilityReview": "pending",
+      "headline": "On a phone, the install banner icon has no alt attribute",
+      "observation": "The same banner loads its icon from a favicon service with no alt attribute at all, so the image is announced by its file name or its URL.",
+      "screens": [
+        "movement-home",
+        "movement-program",
+        "movement-faq"
+      ],
+      "state": "Movement portal on a phone viewport, install banner shown",
+      "viewports": [
+        "mobile"
+      ],
+      "selector": "._appIcon_1yk10_17",
+      "snippet": "<img class=\"_appIcon_1yk10_17\" src=\"https://s2.googleusercontent.com/s2/favicons?domain=https://movement.weguide.health\">",
+      "source": "axe",
+      "axeImpact": "critical",
+      "method": "axe-core 4.13.0, rule image-alt, Chromium 153 headless 390x844, two runs on 14 Sep 2026 twenty minutes apart",
+      "technicalEvidence": "reproduced",
+      "reproducedIn": [
+        "pass1",
+        "pass2"
+      ],
+      "proposedCriterion": {
+        "number": "1.1.1",
+        "name": "Non-text Content",
+        "level": "A"
+      },
+      "proposedRemediation": "Add alt=\"\" if the icon repeats the banner text, or an alt that names the app if it does not.",
+      "evidence": [
+        "data/scans/movement-home.mobile.pass1.json",
+        "data/scans/movement-home.mobile.pass2.json"
+      ],
+      "check": {
+        "kind": "axe",
+        "ruleId": "image-alt",
+        "slug": "movement-home",
+        "viewport": "mobile",
+        "anchor": "img",
+        "stateSelector": "h1"
+      }
+    },
+    {
+      "id": "O08",
+      "accessibilityReview": "pending",
+      "headline": "Every portal screen reports the same document title",
+      "observation": "The landing, sign in, create account and error screens all report <title>WeGuide</title>. 4 screens, one title. A screen reader user moving between them, or reading a browser tab or a history entry, gets the same word each time, including on the screen that says the server cannot be reached.",
+      "screens": [
+        "portal-landing",
+        "portal-signin-email",
+        "portal-register-email",
+        "portal-login-deeplink"
+      ],
+      "state": "All four portal screens reached without an account",
+      "viewports": [
+        "desktop"
+      ],
+      "selector": "head > title",
+      "snippet": "<title>WeGuide</title>",
+      "source": "scripted-measure",
+      "axeImpact": null,
+      "method": "document title read on each screen after render, then compared across the corpus, Chromium 153 headless 1280x800, two runs on 14 Sep 2026 twenty minutes apart",
+      "technicalEvidence": "reproduced",
+      "reproducedIn": [
+        "pass1",
+        "pass2"
+      ],
+      "proposedCriterion": {
+        "number": "2.4.2",
+        "name": "Page Titled",
+        "level": "A"
+      },
+      "proposedRemediation": "Set the title on each route, for example \"Sign in - WeGuide\", and update it when the router navigates.",
+      "evidence": [
+        "data/manual/pass1.json",
+        "data/manual/pass2.json"
+      ],
+      "check": {
+        "kind": "titleRepeated",
+        "title": "WeGuide",
+        "minScreens": 4
+      }
+    },
+    {
+      "id": "O09",
+      "accessibilityReview": "pending",
+      "headline": "Identity fields declare autocomplete=\"off\"",
+      "observation": "On the create account screen 4 visible fields, the email address and the three text fields beside it, declare autocomplete=\"off\"; the sign in email field does the same. That turns off the browser and password manager autofill that a reader with a motor or memory impairment relies on, and it is the mechanism WCAG names for identifying an input's purpose.",
+      "screens": [
+        "portal-signin-email",
+        "portal-register-email"
+      ],
+      "state": "Sign in and create account screens, email method, fields empty",
+      "viewports": [
+        "desktop"
+      ],
+      "selector": "#ion-input-4, #ion-input-0, #ion-input-1, #ion-input-2",
+      "snippet": "<input class=\"native-input sc-ion-input-md\" id=\"ion-input-4\" autocapitalize=\"off\" autocomplete=\"off\" autocorrect=\"off\" name=\"ion-input-4\" placeholder=\"\" spellcheck=\"false\" type=\"email\" aria-invalid=\"true\">",
+      "source": "scripted-measure",
+      "axeImpact": null,
+      "method": "autocomplete attribute read from every rendered form control, Chromium 153 headless 1280x800, two runs on 14 Sep 2026 twenty minutes apart",
+      "technicalEvidence": "reproduced",
+      "reproducedIn": [
+        "pass1",
+        "pass2"
+      ],
+      "proposedCriterion": {
+        "number": "1.3.5",
+        "name": "Identify Input Purpose",
+        "level": "AA"
+      },
+      "proposedRemediation": "Set autocomplete to the token that matches each field: email or username, given-name, family-name, tel. The program code has no token in the WCAG list and can keep autocomplete off.",
+      "evidence": [
+        "data/manual/pass1.json",
+        "data/manual/pass2.json"
+      ],
+      "check": {
+        "kind": "autocompleteOff",
+        "slug": "portal-register-email",
+        "minFields": 4
+      }
+    },
+    {
+      "id": "O10",
+      "accessibilityReview": "pending",
+      "headline": "Focusing a portal text field changes nothing on screen",
+      "observation": "Arriving on the sign in email field with the Tab key leaves the rendering identical: no outline, no shadow, no border change, on the input or on any of its three ancestors. A capture of the field before focus and a capture of the same field while it holds focus are the same file, byte for byte. The same measurement repeats on the four create account fields.",
+      "screens": [
+        "portal-signin-email",
+        "portal-register-email"
+      ],
+      "state": "Sign in and create account screens, email method, field reached with the Tab key",
+      "viewports": [
+        "desktop"
+      ],
+      "selector": "#ion-input-1",
+      "snippet": "<input class=\"native-input sc-ion-input-md\" id=\"ion-input-1\" type=\"email\">",
+      "source": "scripted-measure",
+      "axeImpact": null,
+      "method": "computed style of the focused element and its ancestors compared with the same element unfocused, then two cropped captures compared byte for byte, Chromium 153 headless 1280x800, two runs on 14 Sep 2026 twenty minutes apart",
+      "technicalEvidence": "reproduced",
+      "reproducedIn": [
+        "pass1",
+        "pass2"
+      ],
+      "proposedCriterion": {
+        "number": "2.4.7",
+        "name": "Focus Visible",
+        "level": "AA"
+      },
+      "proposedRemediation": "Give focused fields and buttons a visible indicator, for example a two pixel outline in the brand purple with an offset, and never remove the browser default without replacing it.",
+      "evidence": [
+        "public/evidence/signin-email-focused.png",
+        "data/manual/pass1.json",
+        "data/manual/pass2.json"
+      ],
+      "check": {
+        "kind": "noFocusChange",
+        "slug": "portal-signin-email",
+        "minStops": 1
+      }
+    },
+    {
+      "id": "O11",
+      "accessibilityReview": "pending",
+      "headline": "axe flags the Login and Submit buttons for contrast, and they are inactive",
+      "observation": "axe measures the Login and Submit button labels at 3.01 to 1, under the 4.5 required. In the state we observed, both buttons carry the framework's disabled class because the form is empty. WCAG 1.4.3 does not set a contrast requirement for an inactive component, so this may well be exempt where it stands, and the question is what the same label measures once the button is live. Reaching that state means typing an address into their form, which this run did not do.",
+      "screens": [
+        "portal-signin-email",
+        "portal-register-email"
+      ],
+      "state": "Sign in and create account screens with empty forms, so the submit control is in its disabled styling",
+      "viewports": [
+        "desktop",
+        "mobile",
+        "zoom200"
+      ],
+      "selector": "#login-button > span",
+      "snippet": "<span _ngcontent-ng-c3013198412=\"\">&nbsp;Login</span>",
+      "source": "axe",
+      "axeImpact": "serious",
+      "method": "axe-core 4.13.0, rule color-contrast, Chromium 153 headless 1280x800, two runs on 14 Sep 2026 twenty minutes apart",
+      "technicalEvidence": "to-investigate",
+      "reproducedIn": [
+        "pass1",
+        "pass2"
+      ],
+      "openQuestion": "The rule fires in both runs, but the exception for inactive components may apply. It needs measuring in the enabled state, which requires entering a real address in their form.",
+      "proposedCriterion": {
+        "number": "1.4.3",
+        "name": "Contrast (Minimum)",
+        "level": "AA"
+      },
+      "proposedRemediation": "Measure the enabled state first. If it is also under 4.5 to 1, darken the label; if only the disabled state is under, nothing is required by 1.4.3.",
+      "evidence": [
+        "data/scans/portal-signin-email.desktop.pass1.json",
+        "data/scans/portal-signin-email.desktop.pass2.json"
+      ],
+      "check": {
+        "kind": "axe",
+        "ruleId": "color-contrast",
+        "slug": "portal-signin-email",
+        "viewport": "desktop",
+        "anchor": "#login-button",
+        "stateSelector": "input[type=email]"
+      }
+    },
+    {
+      "id": "O12",
+      "accessibilityReview": "pending",
+      "headline": "The empty submit shows an error in red, and no live region carries it",
+      "observation": "Pressing Login with the field empty turns the field red, sets aria-invalid and prints \"Please fill out the Email\" under it. The screen holds 1 live region and it is empty, so nothing was announced through it. The message also has no programmatic tie to the field it belongs to.",
+      "screens": [
+        "portal-signin-email"
+      ],
+      "state": "Sign in screen, email field left empty, Login pressed once",
+      "viewports": [
+        "desktop"
+      ],
+      "selector": "input[type=email]",
+      "snippet": "<input type=\"email\" aria-invalid=\"true\"> with the message rendered in a sibling node",
+      "source": "scripted-measure",
+      "axeImpact": null,
+      "method": "One scripted press of the Login button with the field empty, Chromium 153 headless 1280x800, 14 Sep 2026. Run once on purpose: no address was entered and nothing was sent.",
+      "technicalEvidence": "to-investigate",
+      "reproducedIn": [
+        "pass1"
+      ],
+      "openQuestion": "This was done once, deliberately, so it is not a reproduced observation. A second identical press, and a listen with a screen reader, are what would settle whether the message is announced.",
+      "proposedCriterion": {
+        "number": "4.1.3",
+        "name": "Status Messages",
+        "level": "AA"
+      },
+      "proposedRemediation": "Put the message in a container with role=\"alert\" or aria-live=\"assertive\", and point the field at it with aria-describedby so the two are tied together.",
+      "evidence": [
+        "data/manual/error-identification.json",
+        "data/shots/error-identification.after.png"
+      ],
+      "check": {
+        "kind": "manual-once"
+      }
+    }
+  ]
+}

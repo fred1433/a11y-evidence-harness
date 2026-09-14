@@ -1,0 +1,25 @@
+name: harness
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  control-case:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Run the control case
+        # No website is contacted. The harness runs against the synthetic
+        # fixtures in fixtures/control-case over file:// and has to prove that a
+        # seeded defect is detected, that a corrected copy reports it as gone,
+        # and that deleting the component yields "cannot conclude" rather than a
+        # pass. A green run here says nothing about anybody's live site.
+        run: node --test tests/

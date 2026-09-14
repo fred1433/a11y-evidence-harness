@@ -1,0 +1,49 @@
+<!doctype html>
+<!--
+  Local control case, synthetic. Nobody's markup is copied here.
+
+  Four defect shapes that a component framework produces often enough to be worth
+  a permanent regression test. Each one is what the harness must detect:
+
+    1. a text field wrapped in a <label> that carries no text, so the field has
+       no accessible name                                     axe rule: label
+    2. an un-evaluated template expression left in an ARIA
+       attribute value                          axe rule: aria-valid-attr-value
+    3. an element with role="img" and no accessible name     axe rule: role-img-alt
+    4. a viewport meta tag that forbids zooming               axe rule: meta-viewport
+
+  corrected.html fixes all four. component-removed.html deletes the form, and the
+  harness must answer "cannot conclude" there rather than "clean".
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Control case, sign in</title>
+  <style>
+    body { font: 16px/1.5 system-ui, sans-serif; margin: 0; padding: 40px; background: #fff; color: #111; }
+    .form { max-width: 360px; }
+    .field { display: block; margin: 0 0 20px; }
+    .field .label-text { }
+    input { width: 100%; padding: 10px; border: 1px solid #767676; border-radius: 6px; font: inherit; }
+    .submit { margin-top: 8px; padding: 11px 20px; border: 0; border-radius: 6px;
+              background: #7fa8ff; color: #ffffff; font: inherit; cursor: pointer; }
+    .icon { display: inline-block; width: 20px; height: 20px; background: #444; border-radius: 4px; vertical-align: middle; }
+  </style>
+</head>
+<body>
+  <main class="form">
+    <h1>Sign in</h1>
+    <form action="#" onsubmit="return false">
+      <!-- 1. the label carries no text, so the field has no accessible name -->
+      <label class="field" for="cc-email"><span class="label-text"></span>
+        <input id="cc-email" type="email" autocomplete="off">
+      </label>
+      <!-- 3. role="img" with nothing to announce -->
+      <span class="icon" role="img"></span>
+      <!-- 2. the template expression was never evaluated -->
+      <button class="submit" type="submit" aria-disabled="getErrors(false).length? 'true' : 'false'">Sign in</button>
+    </form>
+  </main>
+</body>
+</html>

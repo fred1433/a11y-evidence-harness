@@ -1,0 +1,6 @@
+node_modules
+.next
+.git
+_recon*.mjs
+_dbg*.mjs
+_verify*.mjs
